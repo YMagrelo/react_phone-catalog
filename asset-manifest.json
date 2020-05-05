@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "./static/css/main.045274bf.chunk.css",
-    "main.js": "./static/js/main.8ee7c00c.chunk.js",
-    "main.js.map": "./static/js/main.8ee7c00c.chunk.js.map",
+    "main.css": "./static/css/main.94589d5b.chunk.css",
+    "main.js": "./static/js/main.996b017d.chunk.js",
+    "main.js.map": "./static/js/main.996b017d.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.fb694b63.js",
     "runtime-main.js.map": "./static/js/runtime-main.fb694b63.js.map",
-    "static/js/2.7fb4c302.chunk.js": "./static/js/2.7fb4c302.chunk.js",
-    "static/js/2.7fb4c302.chunk.js.map": "./static/js/2.7fb4c302.chunk.js.map",
+    "static/js/2.d2531221.chunk.js": "./static/js/2.d2531221.chunk.js",
+    "static/js/2.d2531221.chunk.js.map": "./static/js/2.d2531221.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.adcadbf329eb80a722f2c26330aa80e6.js": "./precache-manifest.adcadbf329eb80a722f2c26330aa80e6.js",
+    "precache-manifest.f8b37288c124d2e5976f756f23e06d5d.js": "./precache-manifest.f8b37288c124d2e5976f756f23e06d5d.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.045274bf.chunk.css.map": "./static/css/main.045274bf.chunk.css.map",
-    "static/js/2.7fb4c302.chunk.js.LICENSE.txt": "./static/js/2.7fb4c302.chunk.js.LICENSE.txt",
+    "static/css/main.94589d5b.chunk.css.map": "./static/css/main.94589d5b.chunk.css.map",
+    "static/js/2.d2531221.chunk.js.LICENSE.txt": "./static/js/2.d2531221.chunk.js.LICENSE.txt",
     "static/media/Infinity-1.5s-200px.svg": "./static/media/Infinity-1.5s-200px.ceb90013.svg",
     "static/media/back-arrow.svg": "./static/media/back-arrow.fc2574b4.svg",
     "static/media/basket-icon.svg": "./static/media/basket-icon.a860aa3c.svg",
+    "static/media/favorite-icon--active.svg": "./static/media/favorite-icon--active.5402f79f.svg",
     "static/media/favorite-icon.svg": "./static/media/favorite-icon.35916e8d.svg",
     "static/media/home-icon.svg": "./static/media/home-icon.8c93bc4f.svg",
     "static/media/remove-icon.svg": "./static/media/remove-icon.3b0f193d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fb694b63.js",
-    "static/js/2.7fb4c302.chunk.js",
-    "static/css/main.045274bf.chunk.css",
-    "static/js/main.8ee7c00c.chunk.js"
+    "static/js/2.d2531221.chunk.js",
+    "static/css/main.94589d5b.chunk.css",
+    "static/js/main.996b017d.chunk.js"
   ]
 }
