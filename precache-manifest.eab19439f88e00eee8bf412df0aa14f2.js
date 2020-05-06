@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "903453184522280e81761f81eb15d455",
+    "revision": "3b1fb0326c735b164ebffe4444a2923c",
     "url": "./index.html"
   },
   {
-    "revision": "d5bcc19e1bd0f3ceabe4",
-    "url": "./static/css/main.94589d5b.chunk.css"
+    "revision": "a5c90cf986cfb740b733",
+    "url": "./static/css/main.62af4e08.chunk.css"
   },
   {
-    "revision": "ee0265e87b127a962a96",
-    "url": "./static/js/2.d2531221.chunk.js"
+    "revision": "ff78cd821dff61c21613",
+    "url": "./static/js/2.1e4571ff.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "./static/js/2.d2531221.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.1e4571ff.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d5bcc19e1bd0f3ceabe4",
-    "url": "./static/js/main.996b017d.chunk.js"
+    "revision": "a5c90cf986cfb740b733",
+    "url": "./static/js/main.4727e9ff.chunk.js"
   },
   {
     "revision": "12c4e154b7e3522d400f",
@@ -44,11 +44,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/favorite-icon.35916e8d.svg"
   },
   {
+    "revision": "67be4a4a4d709745ad41a3578d953895",
+    "url": "./static/media/forvard-arrow.67be4a4a.svg"
+  },
+  {
     "revision": "8c93bc4f41bc2512765bb8c6fa8bea0b",
     "url": "./static/media/home-icon.8c93bc4f.svg"
   },
   {
     "revision": "3b0f193d5ee6518250338e24f45e5298",
     "url": "./static/media/remove-icon.3b0f193d.svg"
+  },
+  {
+    "revision": "d612784d62b98934874449e3f1e3cbd0",
+    "url": "./static/media/slider-1.d612784d.jpg"
   }
 ]);
