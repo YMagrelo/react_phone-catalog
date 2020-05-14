@@ -1,0 +1,33 @@
+.hotPrices {
+  margin: 100px 0 80px;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #B4BDC4;
+  }
+
+  &__btn--left{
+    margin-right: 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    height: 560px;
+    overflow: hidden;
+    transition: 0.9s;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 13px;
+    border: 1px solid #E2E6E9;
+  }
+}

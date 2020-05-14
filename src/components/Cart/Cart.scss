@@ -1,0 +1,84 @@
+@import '../../mixin.scss';
+
+.cart {
+  min-height: 400px;
+  margin-left: -30px;
+  &__navigation{
+    max-width: 1200px;
+    margin: 25px auto 15px;
+  }
+
+  &__back-arrow {
+    margin-right: 10px;
+  }
+
+  &__back-link {
+    @include Small-text-12;
+  }
+
+  &__back-link:hover {
+    color: #000;
+  }
+
+  &__heading {
+    max-width: 1200px;
+    margin: 0 auto 25px;
+  }
+
+  &__content {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__list {
+    margin-right: 15px;
+  }
+
+  &__item {
+    width: 750px;
+    height: 130px;
+    margin-bottom: 15px;
+  }
+
+  &__item,
+  &__totalCount {
+    border: 1px solid #E2E6E9;
+  }
+}
+
+.cartItem__image {
+  width: 65px;
+  height: 65px;
+}
+
+.total {
+  width: 370px;
+  height: 215px;
+  padding-top: 25px;
+
+  &__price,
+  &__item-count {
+    text-align: center;
+  }
+
+  &__item-count {
+    @include Body-text-14;
+    margin-bottom: 25px;
+  }
+
+  &__button-container {
+    width: 320px;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #E2E6E9;
+  }
+
+  &__button {
+    width: 100%;
+    height: 50px;
+    background-color: #313237;
+    color: #fff;
+  }
+}
