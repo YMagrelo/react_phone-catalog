@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.ae7c137d.chunk.css",
-    "main.js": "./static/js/main.c196dea1.chunk.js",
-    "main.js.map": "./static/js/main.c196dea1.chunk.js.map",
+    "main.css": "./static/css/main.bda82430.chunk.css",
+    "main.js": "./static/js/main.40a7b927.chunk.js",
+    "main.js.map": "./static/js/main.40a7b927.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.fb694b63.js",
     "runtime-main.js.map": "./static/js/runtime-main.fb694b63.js.map",
     "static/js/2.edbf8583.chunk.js": "./static/js/2.edbf8583.chunk.js",
     "static/js/2.edbf8583.chunk.js.map": "./static/js/2.edbf8583.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.130c7ddf38d126e93302502bb30512f2.js": "./precache-manifest.130c7ddf38d126e93302502bb30512f2.js",
+    "precache-manifest.9d4a8f3260bc74f2a70b60b154010844.js": "./precache-manifest.9d4a8f3260bc74f2a70b60b154010844.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.ae7c137d.chunk.css.map": "./static/css/main.ae7c137d.chunk.css.map",
+    "static/css/main.bda82430.chunk.css.map": "./static/css/main.bda82430.chunk.css.map",
     "static/js/2.edbf8583.chunk.js.LICENSE.txt": "./static/js/2.edbf8583.chunk.js.LICENSE.txt",
     "static/media/Infinity-1.5s-200px.svg": "./static/media/Infinity-1.5s-200px.ceb90013.svg",
     "static/media/back-arrow.svg": "./static/media/back-arrow.fc2574b4.svg",
@@ -20,7 +20,7 @@
     "static/media/forvard-arrow.svg": "./static/media/forvard-arrow.67be4a4a.svg",
     "static/media/home-icon.svg": "./static/media/home-icon.8c93bc4f.svg",
     "static/media/remove-icon.svg": "./static/media/remove-icon.3b0f193d.svg",
-    "static/media/rsz_slider-1.jpg": "./static/media/rsz_slider-1.937009c2.jpg",
+    "static/media/rsz_slider-1.jpg": "./static/media/rsz_slider-1.e54ec94f.jpg",
     "static/media/slider-2.jpg": "./static/media/slider-2.f5235277.jpg",
     "static/media/slider-3.jpg": "./static/media/slider-3.6ebd09aa.jpg",
     "static/media/slider-4.jpg": "./static/media/slider-4.9c70cb62.jpg",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.fb694b63.js",
     "static/js/2.edbf8583.chunk.js",
-    "static/css/main.ae7c137d.chunk.css",
-    "static/js/main.c196dea1.chunk.js"
+    "static/css/main.bda82430.chunk.css",
+    "static/js/main.40a7b927.chunk.js"
   ]
 }
