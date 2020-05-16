@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { phoneDetailsPropType } from '../../../propTypesConstants';
 import { PageNotFound } from '../../PageNotFound/PageNotFound';
-import favoriteIcon from '../../../assets/images/icons/favorite-icon.svg';
 import './PhoneDetails.scss';
 import './slider.scss';
 import './order.scss';
 import { Slider } from './Slider';
+import FavoriteButton from '../../Common/FavoriteButton';
 import backArrow from '../../../assets/images/icons/back-arrow.svg';
 import homeIcon from '../../../assets/images/icons/home-icon.svg';
 import forwardArrow from '../../../assets/images/icons/forvard-arrow.svg';
@@ -128,14 +128,7 @@ export const PhoneDetails = (props) => {
             >
               Add to cart
             </button>
-            <button className="order__favorite" type="button">
-              <img
-                src={favoriteIcon}
-                alt="favorite icon"
-                className="order__favorite-icon"
-              />
-              {' '}
-            </button>
+            <FavoriteButton id={details.id} />
           </div>
           <div className="order__product-details">
             <p className="product-details">

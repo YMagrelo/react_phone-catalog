@@ -7,6 +7,7 @@ import {
   ADD_QUANTITY,
   SUBSTRACT_QUANTITY,
   ADD_TO_FAVORITES,
+  DELETE_FROM_FAVORITES,
 } from './constants';
 
 export const setPhoneDetailsAC = (details) => ({
@@ -43,5 +44,10 @@ export const substractQuantityAC = (id) => ({
 
 export const addToFavoritesAC = (id) => ({
   type: ADD_TO_FAVORITES,
+  id,
+});
+
+export const deleteFromFavoritesAC = (id) => ({
+  type: DELETE_FROM_FAVORITES,
   id,
 });
