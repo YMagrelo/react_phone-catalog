@@ -5,7 +5,7 @@ import { ProductCard } from './ProductCard/ProductCard';
 import { phonesPropType } from '../../propTypesConstants';
 
 export const PhonesCatalog = (props) => {
-  const { phones, addToCart, addToFavorites, itemPrice } = props;
+  const { phones, addToCart, itemPrice } = props;
 
   return (
     <>
@@ -17,7 +17,6 @@ export const PhonesCatalog = (props) => {
               <ProductCard
                 {...phone}
                 addToCart={addToCart}
-                addToFavorites={addToFavorites}
                 itemPrice={itemPrice}
               />
             </li>
@@ -31,6 +30,5 @@ export const PhonesCatalog = (props) => {
 PhonesCatalog.propTypes = {
   phones: phonesPropType.isRequired,
   addToCart: PropTypes.func.isRequired,
-  addToFavorites: PropTypes.func.isRequired,
   itemPrice: PropTypes.number.isRequired,
 };

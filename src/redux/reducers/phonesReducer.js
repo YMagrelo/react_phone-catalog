@@ -8,6 +8,7 @@ import {
   ADD_QUANTITY,
   SUBSTRACT_QUANTITY,
   ADD_TO_FAVORITES,
+  DELETE_FROM_FAVORITES,
 } from './constants';
 import { setPhonesAC, toggleIsFetchingAC } from './actionCreators';
 
@@ -34,6 +35,7 @@ export const phonesReducer = (state = initialState, action) => {
         ...state,
         isFetching: action.isFetching,
       };
+
     case ADD_TO_CART:
       const addedPhone = state.phones
         .find(phone => phone.id === action.id);
@@ -88,12 +90,16 @@ export const phonesReducer = (state = initialState, action) => {
       };
 
     case ADD_TO_FAVORITES:
-      const favoritePhone = state.phones
-        .find(phone => phone.id === action.id);
-
       return {
         ...state,
-        favoritePhones: [...state.favoritePhones, favoritePhone],
+        favoritePhones: [...state.favoritePhones, action.id],
+      };
+
+    case DELETE_FROM_FAVORITES:
+      return {
+        ...state,
+        favoritePhones: [...state.favoritePhones]
+          .filter(id => id !== action.id),
       };
 
     default:

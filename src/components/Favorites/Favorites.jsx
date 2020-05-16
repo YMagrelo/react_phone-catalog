@@ -10,10 +10,13 @@ import { favoritePhonesPropType } from '../../propTypesConstants';
 export const Favorites = (props) => {
   const {
     favoritePhones,
-    addToFavorites,
     addToCart,
     itemPrice,
+    phones,
   } = props;
+
+  const favoriteList = phones
+    .filter(phone => favoritePhones.includes(phone.id));
 
   return (
     <div className="catalog">
@@ -41,12 +44,11 @@ export const Favorites = (props) => {
 
       <ul className="catalog__product-list">
 
-        {favoritePhones.map(favoritePhone => (
-          <li  className="catalog__product-item">
+        {favoriteList.map(favoritePhone => (
+          <li className="catalog__product-item">
             <ProductCard
               {...favoritePhone}
               addToCart={addToCart}
-              addToFavorites={addToFavorites}
               itemPrice={itemPrice}
             />
           </li>
@@ -59,6 +61,5 @@ export const Favorites = (props) => {
 Favorites.propTypes = {
   favoritePhones: favoritePhonesPropType.isRequired,
   addToCart: PropTypes.func.isRequired,
-  addToFavorites: PropTypes.func.isRequired,
   itemPrice: PropTypes.number.isRequired,
 };
