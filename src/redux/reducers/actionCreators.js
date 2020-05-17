@@ -4,8 +4,8 @@ import {
   TOGGLE_IS_FETCHING,
   ADD_TO_CART,
   REMOVE_FROM_CART,
-  ADD_QUANTITY,
-  SUBSTRACT_QUANTITY,
+  SET_PRICE,
+  SET_QUANTITY,
   ADD_TO_FAVORITES,
   DELETE_FROM_FAVORITES,
 } from './constants';
@@ -22,24 +22,24 @@ export const toggleIsFetchingAC = (isFetching) => ({
   type: TOGGLE_IS_FETCHING, isFetching,
 });
 
-export const addToCartAC = (id) => ({
+export const setCartId = (payload) => ({
   type: ADD_TO_CART,
-  id,
+  payload,
 });
 
-export const removeFromCartAC = (id) => ({
+export const deleteCartId = (payload) => ({
   type: REMOVE_FROM_CART,
-  id,
+  payload,
 });
 
-export const addQantityAC = (id) => ({
-  type: ADD_QUANTITY,
-  id,
+export const setPriceToAmount = (payload) => ({
+  type: SET_PRICE,
+  payload,
 });
 
-export const substractQuantityAC = (id) => ({
-  type: SUBSTRACT_QUANTITY,
-  id,
+export const setQuantityToTotal = (payload) => ({
+  type: SET_QUANTITY,
+  payload,
 });
 
 export const addToFavoritesAC = (id) => ({

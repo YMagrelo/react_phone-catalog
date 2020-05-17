@@ -10,78 +10,83 @@ import {
   favoritePhonesPropType,
 } from '../../propTypesConstants';
 
-const Header = (props) => (
-  <header className="header">
-    <div className="header__header-wrapper">
+const Header = (props) => {
+  const { favoritePhones, addedPhones } = props;
+  const countItemCart = Object.keys(addedPhones).length;
 
-      <nav className="header__nav nav">
-        <a
-          className="header__logo"
-          href="https://www.youtube.com/watch?v=fHiGbolFFGw"
-          target="_blank"
-          rel="noopener noreferrer"
-          name="top"
-        >
-          <p className="header__logo-heading">Android</p>
-          <p className="header__logo-underheading">paranoid</p>
-        </a>
-        <ul className="nav__list">
-          <li className="nav__item">
-            <NavLink
-              className="nav__link"
-              to="/"
-              exact
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="nav__item">
-            <NavLink
-              className="nav__link"
-              to="/phones"
-            >
-              Phones
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-      <div className="header__menu">
-        <NavLink to="/favorites">
-          <button className="header__favorite" type="button">
-            <img
-              src={favoriteIcon}
-              alt="favorite icon"
-              className="header__favorite-icon"
-            />
-            {props.favoritePhones.length
-              ? (
-                <div className="header__basket-count">
-                  {props.favoritePhones.length}
-                </div>
-              )
-              : null}
-          </button>
-        </NavLink>
-        <NavLink to="/basket">
-          <button className="header__basket" type="button">
-            <img
-              src={basketIcon}
-              alt="basket icon"
-              className="header__basket-icon"
-            />
-            {props.addedPhones.length
-              ? (
-                <div className="header__basket-count">
-                  {props.addedPhones.length}
-                </div>
-              )
-              : null}
-          </button>
-        </NavLink>
+  return (
+    <header className="header">
+      <div className="header__header-wrapper">
+
+        <nav className="header__nav nav">
+          <a
+            className="header__logo"
+            href="https://www.youtube.com/watch?v=fHiGbolFFGw"
+            target="_blank"
+            rel="noopener noreferrer"
+            name="top"
+          >
+            <p className="header__logo-heading">Android</p>
+            <p className="header__logo-underheading">paranoid</p>
+          </a>
+          <ul className="nav__list">
+            <li className="nav__item">
+              <NavLink
+                className="nav__link"
+                to="/"
+                exact
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                className="nav__link"
+                to="/phones"
+              >
+                Phones
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <div className="header__menu">
+          <NavLink to="/favorites">
+            <button className="header__favorite" type="button">
+              <img
+                src={favoriteIcon}
+                alt="favorite icon"
+                className="header__favorite-icon"
+              />
+              {favoritePhones.length
+                ? (
+                  <div className="header__basket-count">
+                    {props.favoritePhones.length}
+                  </div>
+                )
+                : null}
+            </button>
+          </NavLink>
+          <NavLink to="/basket">
+            <button className="header__basket" type="button">
+              <img
+                src={basketIcon}
+                alt="basket icon"
+                className="header__basket-icon"
+              />
+              {countItemCart !== 0
+                ? (
+                  <div className="header__basket-count">
+                    {countItemCart}
+                  </div>
+                )
+                : null}
+            </button>
+          </NavLink>
+        </div>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 const mapStateToProps = (state) => ({
   addedPhones: state.phonesPage.addedPhones,

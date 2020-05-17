@@ -3,53 +3,43 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Cart } from './Cart';
 import {
-  removeFromCartAC,
-  addQantityAC,
-  substractQuantityAC,
-} from '../../redux/reducers/actionCreators';
-import { addedPhonesPropType } from '../../propTypesConstants';
+  addedPhonesPropType,
+  phonesPropType,
+} from '../../propTypesConstants';
 
 const CartContainer = (props) => {
   const {
     addedPhones,
+    phones,
     totalPrice,
-    removePhone,
     totalCount,
-    addQuantity,
-    substractQuantity,
   } = props;
+
+  const cartList = phones
+    .filter(phone => Object.keys(addedPhones).includes(phone.id));
 
   return (
     <Cart
-      addedPhones={addedPhones}
-      removePhone={removePhone}
+      cartList={cartList}
       totalPrice={totalPrice}
       totalCount={totalCount}
-      addQuantity={addQuantity}
-      substractQuantity={substractQuantity}
+      addedPhones={addedPhones}
     />
   );
 };
 
 const mapStateToProps = (state) => ({
   addedPhones: state.phonesPage.addedPhones,
+  phones: state.phonesPage.phones,
   totalPrice: state.phonesPage.totalPrice,
   totalCount: state.phonesPage.totalCount,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  removePhone: (id) => dispatch(removeFromCartAC(id)),
-  addQuantity: (id) => dispatch(addQantityAC(id)),
-  substractQuantity: (id) => dispatch(substractQuantityAC(id)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartContainer);
+export default connect(mapStateToProps, null)(CartContainer);
 
 CartContainer.propTypes = {
   totalPrice: PropTypes.number.isRequired,
-  removePhone: PropTypes.func.isRequired,
   totalCount: PropTypes.number.isRequired,
-  addQuantity: PropTypes.func.isRequired,
-  substractQuantity: PropTypes.func.isRequired,
   addedPhones: addedPhonesPropType.isRequired,
+  phones: phonesPropType.isRequired,
 };

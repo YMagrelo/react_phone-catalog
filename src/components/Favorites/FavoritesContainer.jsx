@@ -6,14 +6,10 @@ import {
   favoritePhonesPropType,
 } from '../../propTypesConstants';
 import { Favorites } from './Favorites';
-import {
-  addToCartAC,
-} from '../../redux/reducers/actionCreators';
 
 const FavoritesContainer = (props) => {
   const {
     favoritePhones,
-    addToCart,
     itemPrice,
     phones,
   } = props;
@@ -21,7 +17,6 @@ const FavoritesContainer = (props) => {
   return (
     <Favorites
       favoritePhones={favoritePhones}
-      addToCart={addToCart}
       itemPrice={itemPrice}
       phones={phones}
     />
@@ -35,16 +30,10 @@ const mapStateToProps = (state) => ({
   phones: state.phonesPage.phones,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  addToCart: (id) => dispatch(addToCartAC(id)),
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(FavoritesContainer);
+export default connect(mapStateToProps, null)(FavoritesContainer);
 
 FavoritesContainer.propTypes = {
   favoritePhones: favoritePhonesPropType.isRequired,
   phones: phonesPropType.isRequired,
-  addToCart: PropTypes.func.isRequired,
   itemPrice: PropTypes.number.isRequired,
 };
