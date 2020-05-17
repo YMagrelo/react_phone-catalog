@@ -9,6 +9,7 @@ import './slider.scss';
 import './order.scss';
 import { Slider } from './Slider';
 import FavoriteButton from '../../Common/FavoriteButton';
+import AddToCartButton from '../../Common/AddToCartButton';
 import backArrow from '../../../assets/images/icons/back-arrow.svg';
 import homeIcon from '../../../assets/images/icons/home-icon.svg';
 import forwardArrow from '../../../assets/images/icons/forvard-arrow.svg';
@@ -122,12 +123,7 @@ export const PhoneDetails = (props) => {
             <span className="order__price-old">$299</span>
           </p>
           <div className="order__buttons">
-            <button
-              className="order__add-to-cart"
-              type="button"
-            >
-              Add to cart
-            </button>
+            <AddToCartButton id={details.id} />
             <FavoriteButton id={details.id} />
           </div>
           <div className="order__product-details">
