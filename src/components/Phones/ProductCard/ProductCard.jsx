@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ProductCard.scss';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import FavoriteButton from '../../Common/FavoriteButton';
+import AddToCartButton from '../../Common/AddToCartButton';
 
 export const ProductCard = (props) => {
   const {
@@ -10,16 +11,8 @@ export const ProductCard = (props) => {
     name,
     id,
     snippet,
-    addToCart,
     itemPrice,
   } = props;
-
-  const [isInCart, setInCart] = useState(false);
-
-  const handleClick = (phoneId) => {
-    addToCart(phoneId);
-    setInCart(!isInCart);
-  };
 
   return (
     <>
@@ -44,22 +37,7 @@ export const ProductCard = (props) => {
           <p className="card__snippet">{snippet}</p>
         </div>
         <div className="card__buttons">
-          {isInCart ? (
-            <button
-              className="card__add-to-cart card__add-to-cart--added"
-              type="button"
-            >
-              Added to cart
-            </button>
-          ) : (
-            <button
-              className="card__add-to-cart"
-              type="button"
-              onClick={() => handleClick(id)}
-            >
-              Add to cart
-            </button>
-          )}
+          <AddToCartButton id={id} />
           <FavoriteButton
             id={id}
           />
@@ -74,6 +52,5 @@ ProductCard.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   snippet: PropTypes.string.isRequired,
-  addToCart: PropTypes.func.isRequired,
   itemPrice: PropTypes.number.isRequired,
 };

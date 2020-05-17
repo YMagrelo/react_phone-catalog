@@ -5,8 +5,8 @@ import {
   TOGGLE_IS_FETCHING,
   ADD_TO_CART,
   REMOVE_FROM_CART,
-  ADD_QUANTITY,
-  SUBSTRACT_QUANTITY,
+  SET_PRICE,
+  SET_QUANTITY,
   ADD_TO_FAVORITES,
   DELETE_FROM_FAVORITES,
 } from './constants';
@@ -15,10 +15,10 @@ import { setPhonesAC, toggleIsFetchingAC } from './actionCreators';
 const initialState = {
   phones: [],
   isFetching: false,
-  addedPhones: [],
+  addedPhones: {},
   favoritePhones: [],
-  totalPrice: 0,
   itemPrice: 199,
+  totalPrice: 0,
   totalCount: 0,
 };
 
@@ -37,56 +37,30 @@ export const phonesReducer = (state = initialState, action) => {
       };
 
     case ADD_TO_CART:
-      const addedPhone = state.phones
-        .find(phone => phone.id === action.id);
-
-      addedPhone.quantity = 1;
-      addedPhone.price = 199;
-
       return {
         ...state,
-        addedPhones: [...state.addedPhones, addedPhone],
-        totalPrice: state.totalPrice + state.itemPrice,
-        totalCount: state.totalCount + 1,
+        addedPhones: {
+          ...state.addedPhones,
+          [action.payload.id]: action.payload.quantity,
+        },
       };
 
     case REMOVE_FROM_CART:
-      const phoneToRemove = state.addedPhones
-        .find(phone => action.id === phone.id);
-      const withoutRemovedPhone = state.addedPhones
-        .filter(phone => action.id !== phone.id);
-
       return {
         ...state,
-        addedPhones: withoutRemovedPhone,
-        totalPrice: state.totalPrice - phoneToRemove.price,
-        totalCount: state.totalCount - phoneToRemove.quantity,
+        addedPhones: { ...action.payload },
       };
 
-    case ADD_QUANTITY:
-      const addedItem = state.addedPhones
-        .find(phone => phone.id === action.id);
-
-      addedItem.quantity += 1;
-      addedItem.price += 199;
-
+    case SET_PRICE:
       return {
         ...state,
-        totalPrice: state.totalPrice + state.itemPrice,
-        totalCount: state.totalCount + 1,
+        totalPrice: state.totalPrice + action.payload,
       };
 
-    case SUBSTRACT_QUANTITY:
-      const substractItem = state.addedPhones
-        .find(phone => phone.id === action.id);
-
-      substractItem.quantity -= 1;
-      substractItem.price -= 199;
-
+    case SET_QUANTITY:
       return {
         ...state,
-        totalPrice: state.totalPrice - state.itemPrice,
-        totalCount: state.totalCount - 1,
+        totalCount: state.totalCount + action.payload,
       };
 
     case ADD_TO_FAVORITES:
