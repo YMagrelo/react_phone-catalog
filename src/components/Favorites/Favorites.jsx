@@ -5,7 +5,10 @@ import { NavLink } from 'react-router-dom';
 import backArrow from '../../assets/images/icons/back-arrow.svg';
 import homeIcon from '../../assets/images/icons/home-icon.svg';
 import { ProductCard } from '../Phones/ProductCard/ProductCard';
-import { favoritePhonesPropType } from '../../propTypesConstants';
+import {
+  favoritePhonesPropType,
+  phonesPropType,
+} from '../../propTypesConstants';
 
 export const Favorites = (props) => {
   const {
@@ -62,4 +65,5 @@ Favorites.propTypes = {
   favoritePhones: favoritePhonesPropType.isRequired,
   addToCart: PropTypes.func.isRequired,
   itemPrice: PropTypes.number.isRequired,
+  phones: phonesPropType.isRequired,
 };
